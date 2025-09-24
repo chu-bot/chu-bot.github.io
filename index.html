@@ -1,42 +1,92 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>P1 Gold – Your Name</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>P1 Gold – Justin Chu</title>
+  <meta name="description" content="Portfolio page for P1 Gold: The Legend of Zelda (EECS 494). Downloads for Windows and Mac, contributions, and screenshots." />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.5}
-    h1,h2{margin:0.2em 0;} .grid{display:grid;gap:8px}
-    a.button{display:inline-block;padding:.6em 1em;border:1px solid #ccc;border-radius:8px;text-decoration:none}
-    .meta{color:#555}
+    :root {
+      --maxw: 900px;
+      --pad: 16px;
+      --gap: 12px;
+      --radius: 10px;
+      --border: #d0d7de;
+      --muted: #555;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      max-width: var(--maxw);
+      margin: 40px auto;
+      padding: 0 var(--pad);
+      line-height: 1.55;
+    }
+    header h1 { margin: 0 0 4px; }
+    .meta { color: var(--muted); margin: 0 0 24px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--gap);
+      margin: 12px 0 28px;
+    }
+    a.button {
+      display: inline-block;
+      padding: .7em 1em;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      text-align: center;
+    }
+    a.button:hover { background: #f6f8fa; }
+    section { margin: 28px 0; }
+    ul { margin: 8px 0 0 20px; }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--gap);
+    }
+    .shots img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    footer { margin: 36px 0 12px; color: var(--muted); font-size: 0.9rem; }
+    kbd { padding: 2px 6px; border: 1px solid var(--border); border-radius: 6px; background: #f6f8fa; }
   </style>
 </head>
 <body>
-  <h1>P1 Gold – The Legend of Zelda (Classic + Custom)</h1>
-  <p class="meta">Your Name • EECS 494 • Fall 2025</p>
+  <header>
+    <h1>P1 Gold – The Legend of Zelda</h1>
+    <p class="meta">Justin Chu • EECS 494 • Fall 2025</p>
+  </header>
 
-  <h2>Play</h2>
-  <p><a class="button" href="https://your-username.github.io/p1-gold-zelda/webgl/" target="_blank">Play WebGL Build</a></p>
-  <div class="grid">
-    <a class="button" href="https://github.com/your-username/p1-gold-zelda/releases/latest/download/YourGame_Win.zip">Download Windows (.zip)</a>
-    <a class="button" href="https://github.com/your-username/p1-gold-zelda/releases/latest/download/YourGame_Mac.zip">Download Mac (.zip)</a>
-  </div>
+  <section aria-labelledby="downloads">
+    <h2 id="downloads">Download</h2>
+    <div class="grid">
+      <a class="button" href="https://github.com/chu-bot/chu-bot.github.io/releases/download/v1.0.0/zelda_windows.zip" target="_blank" rel="noopener">Download Windows (.zip)</a>
+      <a class="button" href="https://github.com/chu-bot/chu-bot.github.io/releases/download/v1.0.0/zelda_mac.zip" target="_blank" rel="noopener">Download Mac (.zip)</a>
+    </div>
+  </section>
 
-  <h2>Notes</h2>
-  <ul>
-    <li><strong>Cheat to custom level:</strong> Press <kbd>4</kbd> during gameplay.</li>
-    <li>Tech: Unity 2022.x, C#.</li>
-  </ul>
+  <section aria-labelledby="contrib">
+    <h2 id="contrib">Contributions</h2>
+    <p>I implemented all enemy prefabs with movement and animation changes, the base weapon system as well as all secondary weapons, part of inventory management, and the UI aspects of the game.</p>
+  </section>
 
-  <h2>Contributions</h2>
-  <p>I implemented enemy AI (Goriya/Keese), the possession mechanic, collision/phasing, and WebGL/desktop builds.</p>
+  <section aria-labelledby="tech">
+    <h2 id="tech">Tech Used</h2>
+    <ul>
+      <li>Unity</li>
+      <li>C#</li>
+      <li>GitHub</li>
+      <li>Jira (project management)</li>
+    </ul>
+  </section>
 
-  <h2>Screenshots</h2>
-  <img src="screenshot1.png" alt="screenshot" width="420"/>
-  <img src="screenshot2.png" alt="screenshot" width="420"/>
-
-  <h2>Contact</h2>
-  <p><a href="mailto:uniqname@umich.edu">uniqname@umich.edu</a></p>
+  <footer>
+    <p>Questions? <a href="mailto:jmchu@umich.edu">jmchu@umich.edu</a></p>
+  </footer>
 </body>
 </html>
-
